@@ -8,4 +8,5 @@ export default defineConfig({
     viewTransitions: true,
   },
   integrations: [tailwind(), compress()],
+  base: '/matisse/',
 });
