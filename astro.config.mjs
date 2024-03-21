@@ -8,5 +8,6 @@ export default defineConfig({
     viewTransitions: true,
   },
   integrations: [tailwind(), compress()],
-  base: '/matisse/',
+  site: 'https://quinterol.github.io',
+  base: '/matisse',
 });
