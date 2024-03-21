@@ -1,3 +1,7 @@
+---
+import astroConfig from "../../../astro.config.mjs";
+---
+
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-16">
@@ -21,8 +25,8 @@
         class="h-auto w-full rounded-3xl"
         width="1280"
         height="640"
-        src="/img/temporal-landing.png"
-        alt="Hero picture"
+        src={`${import.meta.env.BASE_URL}img/temporal-landing.png`}
+        alt="Principal Images"
       />
     </div>
   </div>
