@@ -15,7 +15,11 @@ const links = [
   //   name: 'Contact',
   //   href: '/contact',
   // },
-];
+].map(link => ({
+  ...link,
+  // Asegúrate de no duplicar la barra inicial si BASE_URL ya termina con una
+  href: `${import.meta.env.BASE_URL}${link.href.startsWith('/') ? link.href.slice(1) : link.href}`,
+}));
 ---
 
 <header
