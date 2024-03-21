@@ -16,12 +16,6 @@ const links = [
   //   href: '/contact',
   // },
 ];
-import { Astro } from 'astro';
-// Modificar cada href para incluir la base del sitio
-const updatedLinks = links.map(link => ({
-  ...link,
-  href: `${Astro.base}${link.href === '/' ? '' : link.href}`,
-}));
 ---
 
 <header
@@ -149,7 +143,7 @@ const updatedLinks = links.map(link => ({
       <!-- Navigation -->
       <nav class="divide-primary-900/10 dark:divide-primary-300/10 flex flex-col gap-1 divide-y">
         {
-          updatedLinks.map((link) => (
+          links.map((link) => (
             <a
               href={link.href}
               class="text-primary-950 dark:text-primary-200 group inline-flex py-6 text-3xl font-medium tracking-tight transition focus-visible:outline-none sm:py-8 sm:text-4xl"
